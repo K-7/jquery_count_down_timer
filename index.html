@@ -1,0 +1,145 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+	 <script src="jquery-1.9.1.js"> </script>
+     <script src="timer.js"></script> <!-- include these two jquery scripts in the html page -->
+     <script type="text/javascript">
+        $(document).ready(function(){
+            
+            var t1 = $("#time").timer({
+                fontSize    : 25,
+                fontWeight  : 900,
+                fontColor   : '#000',
+                startTime   : "00:01:10",
+                stopTime    : "00:00:00",
+                onComplete  : function () { alert("Hurray !!! have a blessed life.") }
+            });
+            
+            $("body").on("click","#stop",function(event){
+                event.preventDefault();
+                t1.stop();
+            });
+            
+            $("body").on("click","#restart",function(event){
+                event.preventDefault();
+                t1.restart();
+            });
+
+            $("body").on("click","#proceed",function(event){
+                event.preventDefault();
+                t1.proceed();
+            });
+
+        });
+     </script>
+
+
+	<style type="text/css">  
+
+    #restart,#stop,#proceed{ 
+        color: #D358F7;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    #stop:hover,#restart:hover,#proceed:hover
+	{ 
+		color:#8000FF;
+	}
+   
+    h1{
+        font-family: Comic Sans MS;
+        color: #60B3EE;
+        font-size: 30px;
+        text-align: center;
+        }
+
+    #time{
+        text-align: center;
+        font-family: Comic;
+        color: #FFFFFF;
+        width: 660px;
+        height: 50px;
+        background-color: #FF0040;
+    }
+    
+    
+    #content{
+        margin-left: 22%;
+        margin-right: 22%;
+        width: 650px;
+        height: 500px;
+        padding-right: 12px;
+        border: 3px solid black;
+        text-align: center;
+    }
+    #documentation{
+        margin: 5%;
+        margin-left: 22%;
+        margin-right: 22%;
+    }
+
+	</style>
+	
+	</head>
+	
+	
+	<body> 
+    <div id="content">
+    <h1>Jquery count down Timer in <span>HH:MM:SS</span> format </h1>
+        <br><br><br>
+    	<div id="time">00:02:00</div> <!--- Give the time in HH:MM:SS format itself -->
+        <br><br><br><br>
+
+        <a id="stop" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the count down</a> <!---Onclick of this Link the count down stops. Onclick of any tag having id="stop" can stop the count down -->
+        <br><br>
+    	<a id="restart" href="#" >Click here to Restart count down timer</a>
+        <br><br>
+        <a id="proceed" href="#" >Click here to Continue count down timer</a>
+    </div>
+    
+    <div id="documentation">
+        Here you will find Jquery Plugin for Count Down Timer in HH:MM:SS format.<br><br>
+        <b>## How to use jQuery Count Down timer:</b><br><br>
+        <b style="font-size:20px;"><a href="#"> Download </a> </b> <br><br>
+        <h4>Requirement : </h4>
+        &lt;script src="jquery-1.9.1.js"> </script><br>
+        &lt;script src="timer.js"></script>
+        <h4>Usage: </h4>
+        <h5>HTML include statement</h5>
+        &lt;div id="time1"&gt;02:00:10&lt;/div &gt; //Give the time in HH:MM:SS format itself
+
+        <h5>Jquery</h5>
+        $(document).ready(function(){<br>
+            <br>
+            var t1 = $("#time1").timer({<br>
+                fontSize    : 25,<br>
+                fontWeight  : 900,<br>
+                fontColor   : '#000',<br>
+                startTime   : "00:01:10", //Time in HH:MM:SS can be given even here<br>
+                stopTime    : "00:00:00", // Can pause the time at this 'stopTime'<br>
+                onComplete  : function () { alert("Hurray !!! have a blessed life.") }<br>
+            });<br>
+            <br>
+            <br>
+                //Stop the timer<br>
+                t1.stop(); <br>
+            <br>
+            <br>
+                // Restart the timer<br>
+                t1.restart();<br>
+            <br>
+            <br>
+                // After stopping allows to continue <br>
+                t1.proceed();<br>
+            <br>  
+        });<br>
+    </div>
+
+	</body>
+</html>
+
+
