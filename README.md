@@ -14,7 +14,7 @@ First, get a copy of the git repo by running:
 git clone git@github.com:K-7/jquery_count_down_timer.git
 ```
 
-### Example use
+### Example use of Plugin
 
 
 ```html
@@ -30,11 +30,6 @@ git clone git@github.com:K-7/jquery_count_down_timer.git
 </html>
 ```
 
-### Example use of Plugin
-
-```html
-<div id="time">02:00:10</div> //Give the time in HH:MM:SS format itself
-```
 
 ### Jquery's to be added in the head section
 
@@ -54,28 +49,20 @@ git clone git@github.com:K-7/jquery_count_down_timer.git
             onComplete  : function () { alert("Hurray !!! have a blessed life.") } //On complete this function
             																	   // triggers
         });
+
+        //Stop the timer : 
+        t1.stop();
+     
+      
+        //Restart the timer : 
+        t1.restart();
+      
+        //After stopping allows to continue : 
+        t1.proceed();
         
     });
 ```
-<br><br>
-			
-            ```html
-             Stop the timer : 
-              t1.stop();
-            ```
-            <br>
-            <br>
-            ```html
-             Restart the timer : 
-              t1.restart();
-            ```
-            <br>
-            <br>
-            ```html
-             After stopping allows to continue : 
-              t1.proceed();
-            ```
-            <br>  
+
 <br><br><br>
 
 Copyright &copy; 2014. All Rights Reserved to kenith [K2A]
