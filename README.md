@@ -65,4 +65,4 @@ git clone git@github.com:K-7/jquery_count_down_timer.git
 
 <br><br><br>
 
-Copyright &copy; 2014. All Rights Reserved to kenith [K2A]
+Copyright &copy; 2014. All Rights Reserved to K2A
